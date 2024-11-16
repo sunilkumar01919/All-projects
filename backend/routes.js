@@ -51,5 +51,14 @@ router.get('/download-csv', async (req, res) => {
   }
 });
 
+router.get('/companies/:id', async (req, res) => {
+  try {
+    const company = await Company.findById(req.params.id);
+    res.json(company);
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching company details' });
+  }
+});
+
 
 module.exports = router;

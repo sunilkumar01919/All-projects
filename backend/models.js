@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const companySchema = new mongoose.Schema({
-  imgdata : Buffer,
   name: String,
   description: String,
   facebook: String,

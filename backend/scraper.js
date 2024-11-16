@@ -22,15 +22,14 @@ const scrapeWebsite = async (url) => {
   const latestmoviename = $('.default-ltr-cache-nycugl')
   const paragraphs = [];
 
-  // $('body div').each((i, el) => {
-  //   paragraphs.push($(el).text());
-  // });
-  // console.log("https://www.netflix.cfrom/in/",$)
+  $('body div').each((i, el) => {
+    paragraphs.push($(el).text());
+  });
+  console.log("https://www.netflix.cfrom/in/",$)
 
   await browser.close();
 
   return {
-    imgdata,
     name,
     description,
     facebook,

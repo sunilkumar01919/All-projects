@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 
 const CompanyTable = () => {
@@ -110,6 +111,11 @@ const CompanyTable = () => {
               <td>{company.description}</td>
               <td>{company.address}</td>
               <td>{company.phone}</td>
+              <td>
+                <Link to={`/company/${company._id}`}>
+                  <Button variant="outlined" size="small">View Details</Button>
+                </Link>
+              </td>
 
 
               {/* <td>
